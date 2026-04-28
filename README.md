@@ -51,10 +51,71 @@ Video Upload → Audio Extraction → Chunking → Speech-to-Text → Translatio
 
 ---
 
-## 📦 Installation  
+## ⚙️ Installation & Setup
 
-```bash
-git clone https://github.com/yourusername/ai-video-summarizer.git
-cd ai-video-summarizer
+### 1. Clone the Repository
+
+```
+git clone https://github.com/saloniTech-hub/AI_Video_Summerizer.git
+cd your-repo-name
+```
+
+### 2. Create Virtual Environment (Recommended)
+
+```
+python -m venv venv
+```
+
+### 3. Activate Virtual Environment
+
+**Windows:**
+
+```
+venv\Scripts\activate
+```
+
+**Mac/Linux:**
+
+```
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
+
+```
+pip install flask
+pip install requests
+pip install python-dotenv
+```
+
+*(Or if requirements.txt is available)*
+
+```
 pip install -r requirements.txt
+```
+
+### 5. Configure Environment Variables
+
+Create a `.env` file in the root folder and add:
+
+```
+API_KEY=your_api_key_here
+```
+
+### 6. Run the Application
+
+```
 python app.py
+```
+
+### 7. Open in Browser
+
+```
+http://127.0.0.1:5000/
+```
+
+
+
+## requirements.txt
+<img width="402" height="204" alt="Screenshot 2026-04-28 193545" src="https://github.com/user-attachments/assets/127c1e98-a1c1-409b-b342-274b7194a015" />
+
