@@ -1,0 +1,161 @@
+:root {
+  --purple-1: #9b5cff;
+  --purple-2: #6a0dad;
+  --muted: #777;
+}
+
+/* ===== BASE ===== */
+body {
+  background: linear-gradient(135deg, #ebe2ff, #f7f2ff);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  background: white;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(106, 13, 173, 0.15);
+}
+
+.app-title {
+  text-align: center;
+  color: var(--purple-2);
+  font-size: 32px;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+/* ===== UPLOAD ===== */
+.upload-box {
+  height: 220px;
+  border: 2px dashed rgba(155, 92, 255, 0.4);
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+#previewVideo {
+  width: 100%;
+  height: 100%;
+  display: none;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* ===== BUTTONS ===== */
+.btn-group,
+.download-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 16px 0;
+}
+
+.btn-primary,
+.btn-danger {
+  padding: 12px 24px;
+  border-radius: 14px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff6b83, #ff4d6d);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ===== PROGRESS ===== */
+.progress-wrap {
+  margin: 16px 0;
+}
+
+.progress-bar {
+  height: 12px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--purple-1), var(--purple-2));
+  transition: width 0.4s;
+}
+
+#progressText {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+/* ===== OUTPUT ===== */
+.output-box {
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+
+.scroll-box {
+  max-height: 260px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ===== SCROLLBAR ===== */
+.scroll-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scroll-box::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--purple-1), var(--purple-2));
+  border-radius: 6px;
+}
+
+.scroll-box::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+/* ===== LOADER ===== */
+.loader {
+  width: 38px;
+  height: 38px;
+  margin: 20px auto;
+  border: 6px solid #e6ddff;
+  border-top: 6px solid var(--purple-1);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
