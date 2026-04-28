@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Video Summarizer</title>
 
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="app-title">🎬 AI Video Summarizer</h1>
+    <p class="subtitle">Smart summaries for long videos</p>
+
+    <!-- Upload -->
+    <div id="uploadBox" class="upload-box">
+      <input type="file" id="videoInput" accept="video/*" hidden />
+      <span id="uploadText">📁 Click to upload video</span>
+      <video id="previewVideo" controls></video>
+    </div>
+
+    <!-- Buttons -->
+    <div class="btn-group">
+      <button id="summarizeBtn" class="btn-primary">🚀 Generate Summary</button>
+      <button id="clearBtn" class="btn-danger">🧼 Clear</button>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-wrap">
+      <div class="progress-bar">
+        <div id="progressFill" class="progress-fill"></div>
+      </div>
+      <div id="progressText">Idle</div>
+    </div>
+
+    <!-- Output -->
+    <h2>✨ Summary</h2>
+    <div id="summaryBox" class="output-box scroll-box"></div>
+
+    <h2>📝 Transcript</h2>
+    <div id="transcriptBox" class="output-box scroll-box"></div>
+
+    <!-- Download -->
+    <div class="download-row">
+      <button id="downloadSummaryBtn" class="btn-primary" disabled>
+        ⬇️ Download Summary (PDF)
+      </button>
+      <button id="downloadTranscriptBtn" class="btn-primary" disabled>
+        ⬇️ Download Transcript (PDF)
+      </button>
+    </div>
+
+    <div id="loader" class="loader"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
