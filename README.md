@@ -46,7 +46,8 @@ Video Upload → Audio Extraction → Chunking → Speech-to-Text → Translatio
 7. Display and download results  
 
 --
-
+## Screenshot
+<img width="1222" height="1005" alt="Screenshot 2025-12-22 220706" src="https://github.com/user-attachments/assets/fee941a0-6074-4923-b966-bbb82d1bfccf" />
 
 ---
 
